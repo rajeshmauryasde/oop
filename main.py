@@ -1,15 +1,22 @@
 class Employee:
-    def __init__(self, name, salary, job_title):
+    def __init__(self, name, salary):
         self.name = name
         self.salary = salary
-        self.job_title = job_title
+
+
+class Developer(Employee):
+    job_title = "SDE"
+
+
+class Maintainer(Employee):
+    job_title = "DEVOPS"
 
 
 employees = [
-    Employee("Rajesh", 200000, "SDE"),
-    Employee("Mahesh", 10000, "DEVOPS"),
-    Employee("Mukesh", 50000, "DEVOPS"),
-    Employee("Gudiya", 150000, "SDE"),
+    Developer("Rajesh", 200000),
+    Maintainer("Mahesh", 10000),
+    Maintainer("Mukesh", 50000),
+    Developer("Gudiya", 150000),
 ]
 
 for e in employees:
