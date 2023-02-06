@@ -1,19 +1,19 @@
-
-class SalaryReport:
+class Report:
     def __init__(self, employees):
         self._employees = employees
 
+
+class SalaryReport(Report):
     def print_salary_report(self):
-        print(f"====Salary Report====")
+        print(f"Accounting Report")
+        print(f"=================")
         for e in self._employees:
             print(f"{e.get_full_name()}, {e.salary}")
 
 
-class JobTitleReport:
-    def __init__(self, employees):
-        self._employees = employees
-
+class JobTitleReport(Report):
     def print_job_title_report(self):
-        print(f"====Job Title Report====")
+        print(f"Employee Report")
+        print(f"===============")
         for e in self._employees:
             print(f"{e.get_full_name()}, {e.job_title}")

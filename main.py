@@ -8,8 +8,12 @@ employees = [
     Developer("Gudiya", "Kumari", 150000),
 ]
 
-job_title_report = JobTitleReport(employees=employees)
-job_title_report.print_job_title_report()
-print()
-salary_report = SalaryReport(employees=employees)
-salary_report.print_salary_report()
+reports = [
+    JobTitleReport(employees=employees),
+    SalaryReport(employees=employees),
+]
+for r in reports:
+    if type(r) is JobTitleReport:
+        r.print_job_title_report()
+    else:
+        r.print_salary_report()
