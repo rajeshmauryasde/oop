@@ -8,8 +8,11 @@ employees = [
     Employee("Rajesh", 200000),
     Employee("Mahesh", 10000),
     Employee("Mukesh", 50000),
-    Employee("Gudiya", 150000)
+    Employee("Gudiya", 150000),
 ]
 
 for e in employees:
-    print(f"{e.name}, {e.salary}")
+    if e.name == "Rajesh" or e.name == "Gudiya":
+        print(f"{e.name}, {e.salary}, SDE")
+    else:
+        print(f"{e.name}, {e.salary}, DEVOPS")
