@@ -4,7 +4,7 @@ class Report:
 
 
 class SalaryReport(Report):
-    def print_salary_report(self):
+    def print_report(self):
         print(f"Accounting Report")
         print(f"=================")
         for e in self._employees:
@@ -12,7 +12,7 @@ class SalaryReport(Report):
 
 
 class JobTitleReport(Report):
-    def print_job_title_report(self):
+    def print_report(self):
         print(f"Employee Report")
         print(f"===============")
         for e in self._employees:

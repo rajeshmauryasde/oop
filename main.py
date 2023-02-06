@@ -1,10 +1,10 @@
-from employee import Developer, Maintainer
+from employee import Developer, Deployer
 from report import JobTitleReport, SalaryReport
 
 employees = [
     Developer("Rajesh", "Kumar", 200000),
-    Maintainer("Mahesh", "Kumar", 10000),
-    Maintainer("Mukesh", "Kumar", 50000),
+    Deployer("Mahesh", "Kumar", 10000),
+    Deployer("Mukesh", "Kumar", 50000),
     Developer("Gudiya", "Kumari", 150000),
 ]
 
@@ -13,7 +13,4 @@ reports = [
     SalaryReport(employees=employees),
 ]
 for r in reports:
-    if type(r) is JobTitleReport:
-        r.print_job_title_report()
-    else:
-        r.print_salary_report()
+    r.print_report()

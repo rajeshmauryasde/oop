@@ -12,5 +12,5 @@ class Developer(Employee):
     job_title = "SDE"
 
 
-class Maintainer(Employee):
+class Deployer(Employee):
     job_title = "DEVOPS"
