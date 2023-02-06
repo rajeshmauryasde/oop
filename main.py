@@ -1,8 +1,15 @@
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
 
-employees = ["Rajesh", "Mahesh", "Mukesh", "Gudiya"]
-salary = [200000, 10000, 50000, 150000]
 
-count = len(employees)
+employees = [
+    Employee("Rajesh", 200000),
+    Employee("Mahesh", 10000),
+    Employee("Mukesh", 50000),
+    Employee("Gudiya", 150000)
+]
 
-for c in range(count):
-    print(f"{employees[c]}, {salary[c]}")
+for e in employees:
+    print(f"{e.name}, {e.salary}")
