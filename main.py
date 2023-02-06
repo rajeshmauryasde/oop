@@ -14,3 +14,4 @@ reports = [
 ]
 for r in reports:
     r.print_report()
+    print()
