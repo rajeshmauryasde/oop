@@ -3,7 +3,7 @@ from employee import Deployer, Developer
 
 
 class Report:
-    def __init__(self, employees: List) -> None:
+    def __init__(self, employees: List[Developer | Deployer]) -> None:
         self._employees = employees
 
 
