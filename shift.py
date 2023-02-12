@@ -7,7 +7,12 @@ class ShiftTimeUtil:
         return f"{start_time} to {end_time}"
 
 
-class MorningShift:
+class Shift:
+    def get_shift_details(self) -> None:
+        raise NotImplementedError
+
+
+class MorningShift(Shift):
     start_time = datetime.time(9, 00)
     end_time = datetime.time(18, 00)
 
@@ -15,7 +20,7 @@ class MorningShift:
         return ShiftTimeUtil.shift_str(start_time=self.start_time, end_time=self.end_time)
 
 
-class AfternoonShift:
+class AfternoonShift(Shift):
     start_time = datetime.time(14, 00)
     end_time = datetime.time(22, 00)
 

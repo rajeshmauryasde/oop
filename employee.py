@@ -1,4 +1,4 @@
-from shift import MorningShift, AfternoonShift
+from shift import Shift
 
 
 class Employee:
@@ -7,7 +7,7 @@ class Employee:
         first_name: str,
         last_name: str,
         salary: int,
-        shift: MorningShift | AfternoonShift,
+        shift: Shift,
     ) -> None:
         self._first_name = first_name
         self._last_name = last_name
